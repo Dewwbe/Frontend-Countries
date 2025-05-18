@@ -115,7 +115,7 @@ const Home = () => {
 
     try {
       if (isFav) {
-        await axios.post("http://localhost:5555/api/favorites/remove", {
+        await axios.post("https://backend-countries-vl3u.onrender.com/api/favorites/remove", {
           email,
           cca3: country.cca3,
         });
@@ -131,7 +131,7 @@ const Home = () => {
           flags: country.flags || {},
         };
 
-        await axios.post("http://localhost:5555/api/favorites/add", {
+        await axios.post("https://backend-countries-vl3u.onrender.com/api/favorites/add", {
           email,
           country: sanitizedCountry,
         });
