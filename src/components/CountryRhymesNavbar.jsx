@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Import useNavigate
+import { useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,11 +11,11 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Home', 'About Us'];
+const pages = ['Home', 'About Us', 'Favourites'];
 
 function CountryRhymesNavbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const navigate = useNavigate(); // ✅ Hook for navigation
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -25,6 +25,7 @@ function CountryRhymesNavbar() {
     setAnchorElNav(null);
     if (page === 'Home') navigate('/home');
     if (page === 'About Us') navigate('/aboutus');
+    if (page === 'Favourites') navigate('/fav');
   };
 
   return (
