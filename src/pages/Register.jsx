@@ -21,7 +21,7 @@ const Register = () => {
   
     setLoading(true);
     try {
-      await axios.post('http://localhost:5555/api/users/register', { name, email, password });
+      await axios.post('https://backend-countries-vl3u.onrender.com/api/users/register', { name, email, password });
       window.location.href = '/';
     } catch (err) {
       console.log(err);

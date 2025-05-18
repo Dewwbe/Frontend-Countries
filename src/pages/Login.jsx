@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:5555/api/users/login', { email, password });
+      const response = await axios.post('https://backend-countries-vl3u.onrender.com/api/users/login', { email, password });
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('email', email);
       window.location.href = '/home';

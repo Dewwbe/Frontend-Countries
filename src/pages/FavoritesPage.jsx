@@ -30,7 +30,7 @@ const FavoritesPage = () => {
     }
 
     try {
-      const res = await axios.get(`http://localhost:5555/api/favorites/${email}`);
+      const res = await axios.get(`https://backend-countries-vl3u.onrender.com/api/favorites/${email}`);
       setFavorites(res.data.favorites || []);
     } catch (err) {
       console.error("Failed to load favorites", err);
@@ -43,7 +43,7 @@ const FavoritesPage = () => {
   // Remove favorite
   const removeFavorite = async (cca3) => {
     try {
-      await axios.post("http://localhost:5555/api/favorites/remove", {
+      await axios.post("https://backend-countries-vl3u.onrender.com/api/favorites/remove", {
         email,
         cca3,
       });
